@@ -1,0 +1,41 @@
+{
+  "name": "full-rich-text-process",
+  "version": "1.0.0",
+  "description": "process full rich text",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --progress --colors --inline --config ./dev/scripts/webpack.client",
+    "dev-start": "cross-env NODE_ENV=development nodemon ./dev/server/dev.js --watch server --watch build",
+    "dev-build": "cross-env NODE_ENV=dev NODE_BUILDER=DEV  node ./site/server/builder.js  --watch server --watch build",
+    "test-build": "cross-env NODE_ENV=test NODE_BUILDER=TEST  node ./site/server/builder.js  --watch server --watch build",
+    "mirror-build": "cross-env NODE_ENV=production NODE_BUILDER=MIR node ./site/server/builder.js  --watch server --watch build",
+    "build": "cross-env NODE_ENV=production NODE_BUILDER=PRO node ./site/server/builder.js --watch server --watch build",
+    "start-test": "pm2 start ./site/pm2/test.config.js",
+    "start-mirror": "pm2 start ./site/pm2/mirror.config.js",
+    "start": "pm2 start ./site/pm2/pro.config.js",
+    "stop-test": "pm2 stop ./site/pm2/test.config.js & pm2 delete ./site/pm2/test.config.js",
+    "stop-mirror": "pm2 stop ./site/pm2/mirror.config.js & pm2 delete ./site/pm2/mirror.config.js",
+    "stop": "pm2 stop ./site/pm2/pro.config.js & pm2 delete ./site/pm2/pro.config.js",
+    "clean": "rimraf ./site/dist/*"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.8",
+    "@fortawesome/fontawesome-free-regular": "^5.0.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.8",
+    "@fortawesome/react-fontawesome": "0.0.17",
+    "cookies-js": "^1.2.3",
+    "cross-env": "^3.2.4",
+    "node-noop": "^1.0.0",
+    "pm2": "^2.10.1",
+    "pwfe-dom": "^1.0.23",
+    "pwfe-server": "^1.0.18"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-plugin-react": "^6.8.0",
+    "nodemon": "^1.12.1",
+    "rimraf": "^2.6.2"
+  },
+  "author": "WFC",
+  "license": "MIT"
+}
