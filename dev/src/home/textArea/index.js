@@ -1,5 +1,6 @@
 import React from 'react'
 import TextEdit from './textEdit'
+import ProcessInfo from './processInfo'
 
 const cn = require('classnames/bind').bind(require('./textArea.scss'))
 
@@ -18,6 +19,7 @@ const cn = require('classnames/bind').bind(require('./textArea.scss'))
  */
 const Text = props =>
     <article className={cn('text')}>
+        <ProcessInfo />
         <TextEdit />
         <button className={cn('btn')}>执行处理</button>
     </article>
