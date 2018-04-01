@@ -1,0 +1,101 @@
+.chk-content-body {
+    font-size: .8rem;
+    font-family: "Pingfang SC", STHeiti, "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    color: #3d464d;
+    line-height: 28px;
+}
+.chk-content-body h1 {
+
+}
+
+.chk-content-body h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 1.5em 0;
+}
+
+.chk-content-body h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 1.5em 0;
+}
+
+.chk-content-body table {
+    word-wrap: break-word;
+}
+
+.chk-content-body p {
+    word-wrap: break-word;
+    margin-bottom: 16px;
+    text-indent: 32px;
+}
+
+.chk-content-body a {
+    color: #46B;
+    transition: color .3s;
+}
+
+.chk-content-body a:hover {
+    color: #c00;
+}
+
+.chk-content-body img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.chk-content-body pre {
+    font-size: 13px;
+    overflow-x: auto;
+    border-radius: 4px;
+    padding: 10px;
+    line-height: 1.4;
+    word-wrap: normal;
+    display: block;
+    background: #3f3f3f;
+    color: #dcdcdc;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.chk-content-body code {
+    overflow-x: auto;
+    border-radius: 4px;
+    padding: 10px;
+    line-height: 1.4;
+    word-wrap: normal;
+    display: block;
+    font-size: 13px;
+    background: #3f3f3f;
+    color: #dcdcdc;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.chk-content-body blockquote {
+    position: relative;
+    color: #000;
+    font-size: 1.5rem;
+    background: #f4f4f4;
+    margin: 20px 0;
+    padding: 16px 24px 16px 35px;
+}
+.chk-content-body ol {
+    list-style-type: decimal;
+}
+.chk-content-body ol{
+    margin: 0 0 .5rem .9rem;
+    padding: 8px 15px;
+}
+.chk-content-body ul{
+    margin: 0 0 .5rem 2.4rem;
+    padding: 8px 15px;
+}
+.hljs-deletion, .hljs-string, .hljs-built_in, .hljs-builtin-name {
+    color: #cc9393;
+}
+.hljs-addition, .hljs-comment, .hljs-quote, .hljs-meta {
+    color: #7f9f7f;
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-tag {
+    color: #e3ceab;
+}
