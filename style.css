@@ -90,12 +90,18 @@
     margin: 0 0 .5rem 2.4rem;
     padding: 8px 15px;
 }
-.hljs-deletion, .hljs-string, .hljs-built_in, .hljs-builtin-name {
+.chk-content-body .code-variable, .code-template-variable, .code-attribute{
+    color: #efdcbc;
+}
+.chk-content-body .code-deletion, .code-string, .code-built_in, .code-builtin-name {
     color: #cc9393;
 }
-.hljs-addition, .hljs-comment, .hljs-quote, .hljs-meta {
+.chk-content-body .code-addition, .code-comment, .code-quote, .code-meta {
     color: #7f9f7f;
 }
-.hljs-keyword, .hljs-selector-tag, .hljs-tag {
+.chk-content-body .code-keyword, .code-selector-tag, .code-tag {
     color: #e3ceab;
+}
+.chk-content-body .code-title, .code-name, .code-selector-id, .code-selector-class, .code-section, .code-type {
+    color: #efef8f;
 }

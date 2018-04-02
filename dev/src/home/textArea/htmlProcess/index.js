@@ -1,11 +1,17 @@
 import Process from './process'
 
-export const htmlProcess = (html, processCB, resultCB) => {
-    const process = new Process(html)
-    processCB('Process Empty <span> tag with id=[OSC_H]');
+export const htmlProcess = (html, name, preUrl, processCB, resultCB) => {
+    const process = new Process(html, name, preUrl)
+    processCB('Remove Empty <span> tag with id=[OSC_H].');
     process.removeNoDataSpan();
-    processCB('Process unUse &nbsp; with tag <p>');
+    processCB('Remove unUse &nbsp; with tag <p>，<h*>.');
     process.removeUnUserNbsp();
+    processCB('Modify Naming Class.');
+    process.modifyClassNaming();
+    processCB('Modify Img tag alt name.');
+    process.modifyImgAlt();
+    processCB('Update Img to server.');
+    process.updateImg(()=>{});
     resultCB(process.getHtml())
 }
 
