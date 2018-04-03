@@ -8,7 +8,7 @@ const devServer = require('pwfe-server/devServer'),
     path = require('path')
 devServer({
     workDir: path.resolve(__dirname, '..'), //dev目录
-    entry: './src/wfc',
+    entry: './src/chkui',
     app: ()=>require('pwfe-dom/app'),
     outPath: './dist',
     runMode: 'SITE',
@@ -16,13 +16,13 @@ devServer({
     reducer: reducer,
     routes: routes,
     vendor: vendor,
-    header : () => require("../src/frame/header"),
-    footer : () => require("../src/frame/footer"),
+    header : () => require("../src/header"),
+    footer : () => require("../src/footer"),
     sourceMap: "source-map",
     define:{
         __RunMode:JSON.stringify('DEV'),
         __FluxLogLevel:"'Detail'",
         __History:"'Browser'"
     },
-    defPageName: '世界足球博物馆'
+    defPageName: '网站建设工具'
 });
