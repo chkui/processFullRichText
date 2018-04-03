@@ -10,8 +10,6 @@ export const htmlProcess = (html, name, preUrl, processCB, resultCB) => {
     process.modifyClassNaming();
     processCB('Modify Img tag alt name.');
     process.modifyImgAlt();
-    processCB('Update Img to server.');
-    process.updateImg(()=>{});
     resultCB(process.getHtml())
 }
 

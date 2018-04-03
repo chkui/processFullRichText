@@ -39,7 +39,7 @@ class Text extends React.Component {
     }
 
     handleClick() {
-        htmlProcess(this.state.html, this.nameRef.getValue(), this.preUrlRef.getValue(), this.handleProcessInfo, this.handleProcessResult);
+        htmlProcess(this.state.html, this.nameRef.getValue(), '', this.handleProcessInfo, this.handleProcessResult);
     }
 
     handleProcessInfo(text) {
@@ -66,7 +66,6 @@ class Text extends React.Component {
                 <div className={cn('edit-box')}>
                     <ProcessInfo ref={ref=>this.processInfoRef=ref} value={state.processInfo}/>
                     <TextInput ref={ref=>this.nameRef = ref} placeholder="输入中文名称..."/>
-                    <TextInput ref={ref=>this.preUrlRef = ref} placeholder="输入链接串"/>
                     <TextEdit onChange={this.handleChange} value={state.html}/>
                     <button onClick={this.handleClick} className={cn('btn')}>执行处理</button>
                     <Result show={state.showResult} html={state.html} onClose={this.handleShowClose}/>
