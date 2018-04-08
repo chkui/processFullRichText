@@ -69,7 +69,6 @@ Process.prototype.generateIndex = function () {
 function generateIndexMapTag(selector) {
     const tree = {};
     for (let tag of indexLevel) {
-
         const elList = selector.find(tag), list = tree[tag] = [];
         let count = 0;
         for (let el of elList) {
@@ -81,10 +80,12 @@ function generateIndexMapTag(selector) {
     return tree;
 }
 
-function generateIndex(node, elList) {
-    for (let el of elList) {
-
+function generateIndex(tree, levelIndex) {
+    let leafList;
+    if (levelIndex < indexLevel.length) {
+        leafList = generateIndex(--levelIndex);
     }
+
 }
 
 export default Process
