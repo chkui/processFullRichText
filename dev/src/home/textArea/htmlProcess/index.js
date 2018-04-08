@@ -11,7 +11,8 @@ export const htmlProcess = (html, name, preUrl, processCB, resultCB) => {
     processCB('Modify Img tag alt name.');
     process.modifyImgAlt();
     processCB('Update Img to server.');
-    process.updateImg(()=>{});
+    //process.updateImg(()=>{});//TODO
+    process.generateIndex();
     resultCB(process.getHtml())
 }
 
