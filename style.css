@@ -57,6 +57,25 @@
     color: #dcdcdc;
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+.chk-content-body ::-webkit-scrollbar {
+    width: 5px!important;
+    height: 5px!important;
+    -webkit-appearance: none;
+}
+.chk-content-body ::-webkit-scrollbar {
+    width: 10px!important;
+    height: 10px!important;
+    -webkit-appearance: none;
+}
+.chk-content-body ::-webkit-scrollbar-thumb {
+    height: 5px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: none;
+    -webkit-border-radius: 6px;
+    background: rgba(153,153,153,.9);
+    background-clip: padding-box;
+}
 
 .chk-content-body code {
     overflow-x: auto;
@@ -74,11 +93,12 @@
 .chk-content-body blockquote {
     position: relative;
     color: #000;
-    font-size: 1.5rem;
+    font-size: .75rem;
     background: #f4f4f4;
     margin: 20px 0;
     padding: 16px 24px 16px 35px;
 }
+
 .chk-content-body ol {
     list-style-type: decimal;
 }

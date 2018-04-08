@@ -11,10 +11,6 @@ class textEdit extends React.Component{
         this.list.push(text)
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
-        console.log(prevProps);
-    }
-
     render(){
         return(
             <div className={cn('processInfo')}>

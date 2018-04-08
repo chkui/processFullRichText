@@ -40,7 +40,7 @@ Process.prototype.modifyClassNaming = function () {
     naming.forEach(i => {
         _this.selector.find(`.${i.resource}`).removeClass(i.resource).addClass(i.target)
     })
-}
+};
 
 Process.prototype.modifyImgAlt = function () {
     const elList = this.selector.find('img');
@@ -48,9 +48,13 @@ Process.prototype.modifyImgAlt = function () {
         el.alt = this.name;
         this.imgList.push(el);
     }
-}
+};
 
-Process.prototype.updateImg = function (cb) {
+Process.prototype.generateIndex = function () {
+
+};
+
+Process.prototype.updateImg = function () {
     //TODO
 }
 
