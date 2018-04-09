@@ -13,6 +13,9 @@ const Result = props =>
         </div>
         <div className={cn('contain')}>
             <div className="chk-content-body">
+                <div className="index-menu">
+
+                </div>
                 <div className="chk-content-inner" dangerouslySetInnerHTML={{__html:props.html}} />
             </div>
         </div>
