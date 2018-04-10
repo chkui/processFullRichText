@@ -1,7 +1,14 @@
 import $ from "jquery";
 import {naming} from './classReplaceNaming'
 import {indexLevel} from './indexLevel'
-
+//TODO 自动上传图片的功能未实现
+/**
+ *
+ * @param text
+ * @param name
+ * @param preUrl
+ * @constructor
+ */
 function Process(text, name, preUrl) {
     this.selector = $(text);
     this.name = name;
