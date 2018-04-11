@@ -4,6 +4,7 @@ import ProcessInfo from './processInfo'
 import {htmlProcess} from './htmlProcess'
 import Result from './result'
 import TextInput from './textInput'
+import IndexInfo from './indexInfo'
 import text from './text.html'
 
 const cn = require('classnames/bind').bind(require('./textArea.scss'))
@@ -24,7 +25,7 @@ const cn = require('classnames/bind').bind(require('./textArea.scss'))
 class Text extends React.Component {
     constructor(...props) {
         super(...props)
-        this.state = {processInfo: '', showResult: false, html: text};
+        this.state = {processInfo: '', showResult: false, index: false, html: text};
         this.handleShowClose = this.handleShowClose.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleProcessResult = this.handleProcessResult.bind(this);
@@ -32,7 +33,7 @@ class Text extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleShowClose(){
+    handleShowClose() {
         this.setState({
             showResult: false
         })
@@ -52,10 +53,11 @@ class Text extends React.Component {
         })
     }
 
-    handleProcessResult(html) {
+    handleProcessResult(html, index) {
         this.setState({
-            html:html,
-            showResult:true
+            html: html,
+            index: index,
+            showResult: true
         })
     }
 
@@ -64,9 +66,10 @@ class Text extends React.Component {
         return (
             <article className={cn('text')}>
                 <div className={cn('edit-box')}>
-                    <ProcessInfo ref={ref=>this.processInfoRef=ref} value={state.processInfo}/>
-                    <TextInput ref={ref=>this.nameRef = ref} placeholder="输入中文名称..."/>
+                    <ProcessInfo ref={ref => this.processInfoRef = ref} value={state.processInfo}/>
+                    <TextInput ref={ref => this.nameRef = ref} placeholder="输入中文名称..."/>
                     <TextEdit onChange={this.handleChange} value={state.html}/>
+                    {state.index && <IndexInfo list={state.index}/>}
                     <button onClick={this.handleClick} className={cn('btn')}>执行处理</button>
                     <Result show={state.showResult} html={state.html} onClose={this.handleShowClose}/>
                 </div>

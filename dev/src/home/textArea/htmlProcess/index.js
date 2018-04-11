@@ -12,7 +12,7 @@ export const htmlProcess = (html, name, preUrl, processCB, resultCB) => {
     process.modifyImgAlt();
     processCB('Update Img to server.');
     //process.updateImg(()=>{});//TODO
-    process.generateIndex();
-    resultCB(process.getHtml())
+    const index = process.generateIndex();
+    resultCB(process.getHtml(), index)
 }
 
