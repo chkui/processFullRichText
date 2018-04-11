@@ -6,7 +6,7 @@
     line-height: 28px;
 }
 .chk-content-body h1 {
-
+    margin-bottom: 20px;
 }
 
 .chk-content-body h2 {
@@ -28,7 +28,6 @@
 .chk-content-body p {
     word-wrap: break-word;
     margin-bottom: 16px;
-    text-indent: 32px;
 }
 
 .chk-content-body a {
@@ -110,6 +109,9 @@
 .chk-content-body ul{
     margin: 0 0 .5rem 2.4rem;
     padding: 8px 15px;
+}
+.chk-content-body li {
+    display: list-item;
 }
 .chk-content-body .code-variable, .code-template-variable, .code-attribute{
     color: #efdcbc;

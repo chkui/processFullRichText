@@ -1,6 +1,6 @@
 {
   "name": "full-rich-text-process",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "process full rich text",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --progress --colors --inline --config ./dev/scripts/webpack.client",
@@ -31,12 +31,12 @@
     "node-noop": "^1.0.0",
     "pm2": "^2.10.1",
     "pwfe-dom": "^1.0.23",
-    "pwfe-server": "^1.0.18"
+    "pwfe-server": "^1.0.18",
     "eslint": "^3.12.2",
     "eslint-plugin-react": "^6.8.0",
     "nodemon": "^1.12.1",
     "rimraf": "^2.6.2"
   },
-  "author": "WFC",
+  "author": "CHKUI",
   "license": "MIT"
 }
