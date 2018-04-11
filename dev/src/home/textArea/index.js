@@ -5,7 +5,7 @@ import {htmlProcess} from './htmlProcess'
 import Result from './result'
 import TextInput from './textInput'
 import IndexInfo from './indexInfo'
-
+import text from './text.html'
 const cn = require('classnames/bind').bind(require('./textArea.scss'));
 
 /**
@@ -24,7 +24,7 @@ const cn = require('classnames/bind').bind(require('./textArea.scss'));
 class Text extends React.Component {
     constructor(...props) {
         super(...props)
-        this.state = {processInfo: '', showResult: false, index: false, html: ''};
+        this.state = {processInfo: '', showResult: false, index: false, html: text};
         this.handleShowClose = this.handleShowClose.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleProcessResult = this.handleProcessResult.bind(this);

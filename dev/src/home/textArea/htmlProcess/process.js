@@ -57,10 +57,6 @@ Process.prototype.modifyImgAlt = function () {
     }
 };
 
-Process.prototype.generateIndex = function () {
-
-};
-
 Process.prototype.updateImg = function () {
     //TODO
 }
@@ -68,7 +64,7 @@ Process.prototype.updateImg = function () {
 Process.prototype.generateIndex = function () {
     const tree = generateIndexMapTag(this.selector), indexObj = {}, indexList = [];
     generateIndex(this.selector, indexObj, tree, 0);
-    mapToList(indexObj, indexList);
+    mapToList(this.selector, indexObj, indexList);
     return indexList;
 }
 
@@ -77,12 +73,12 @@ Process.prototype.generateIndex = function () {
  * @param obj
  * @param list
  */
-function mapToList(obj, list) {
+function mapToList(selector, obj, list) {
     for(let i in obj){
-        const item = {id:i}, child = obj[i]
+        const item = {id:i, name: selector.find(`#${i}`).text().replace(/^\s+|\s+$/g, '')}, child = obj[i]
         if(child){
             item.children = [];
-            mapToList(child, item.children)
+            mapToList(selector, child, item.children)
         }
         list.push(item)
     }

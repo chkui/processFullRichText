@@ -15,9 +15,9 @@ const list = list => {
 const obj = obj => {
     let str;
     if (obj.children) {
-        str = `{id:'${obj.id}',children:${list(obj.children)}}`;
+        str = `{id:'${obj.id}',name:'${obj.name}',children:${list(obj.children)}}`;
     } else {
-        str = `{id:'${obj.id}'}`;
+        str = `{id:'${obj.id}',name:'${obj.name}'}`;
     }
     return str;
 }
