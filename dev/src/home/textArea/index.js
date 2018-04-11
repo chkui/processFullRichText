@@ -24,7 +24,7 @@ const cn = require('classnames/bind').bind(require('./textArea.scss'));
 class Text extends React.Component {
     constructor(...props) {
         super(...props)
-        this.state = {processInfo: '', showResult: false, index: false, html: text};
+        this.state = {processInfo: '', showResult: false, index: false, html: ''};
         this.handleShowClose = this.handleShowClose.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleProcessResult = this.handleProcessResult.bind(this);
