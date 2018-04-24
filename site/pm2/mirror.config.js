@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: 'MLH',
+            name: 'PROCESSTEXT',
             script: './site/dist/server/server.js',
             instances: 1,
             exec_mode: 'cluster',
