@@ -112,6 +112,7 @@
 }
 .chk-content-body li {
     display: list-item;
+    word-break: break-all;
 }
 .chk-content-body .code-variable, .code-template-variable, .code-attribute{
     color: #efdcbc;
